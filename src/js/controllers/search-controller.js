@@ -19,15 +19,15 @@ function SearchController(model, searchView, resultsView) {
         if (e.currentTarget.searchTerm.value == "") {  // input validation
             alert("The input text field can not be blank.")
         }
-        else {
+        else {                         // if input is valid
             const queryParams = {
 
                 name: e.currentTarget.searchTerm.value
             }
 
-            const searchResponse = await this.model.search(queryParams)
+            const searchResponse = await this.model.search(queryParams) // response object
 
-            resultsView.renderStock(searchResponse)
+            resultsView.renderStock(searchResponse) // response being rendered through this function into the DOM
         }
 
 

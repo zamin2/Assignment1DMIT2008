@@ -1,12 +1,11 @@
 import ejs from "ejs";
 
-function isEmpty(obj) {
+function isEmpty(obj) { // function to check for empty json object
   return Object.keys(obj).length === 0;
 }
 
 const stockView = `
 <aside class="stockdiv">
-  
   <ul class="details" >
     <li><b> Stock Symbol: <span><%= a["01. symbol"] %></span><b></li>
     <li> Current Price: <span>USD <%= a["05. price"] %></span></li>
@@ -29,30 +28,28 @@ const noResultsView = `
  <header>
 </aside>
 `;
-function ResultsView(viewId) {
+
+function ResultsView(viewId) {    
   this.container = document.querySelector(viewId);
-
-
-
   this.renderStock = function (stockinfo) {
     // if there are no people in the results
     this.removeChildElements();
     if (isEmpty(stockinfo["Global Quote"])) {
-      const elem = ejs.render(noResultsView);
+      const elem = ejs.render(noResultsView);  // it renders in case if response object is empty
       this.container.insertAdjacentHTML("afterbegin", elem);
     }
     else
     {
-      let a = stockinfo["Global Quote"];
+      let a = stockinfo["Global Quote"];  // it renders in case if response object is not empty
       const elem = ejs.render(stockView, { a });
       this.container.insertAdjacentHTML("afterbegin", elem);
     }
     
-    // search returns results
+    
 
   };
 
-  this.removeChildElements = function () {
+  this.removeChildElements = function () {  // removes previously generated HTML elements in the results container
     this.container.querySelectorAll("aside").forEach((stockdiv) => {
       console.log("remove")
       console.log(stockdiv)

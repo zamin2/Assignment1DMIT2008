@@ -4,7 +4,7 @@ import SearchController from './controllers/search-controller'
 import ResultsView from './views/results-view'
  
 (function(){
-      //const model = new SwapiModel()
+      
       const model = new StockModel()
       const searchView = new SearchView('#search')
       const resultsView = new ResultsView('#results')
