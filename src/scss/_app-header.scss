@@ -1,0 +1,67 @@
+.app-header{
+    padding: 1.5rem 0;
+    width:100%;
+    background-color:#e6eff499;
+    text-align: center;
+    box-shadow: 0 0 2px 0 #b1bbc3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+    h1{
+        font-size:2rem;
+        font-weight: 700;
+        color: #6a7a86;
+        line-height: calc(1rem + 1vmax);
+    }
+
+    p{
+        font-size:1rem;
+        color :#99a6b1;
+    }
+ 
+}
+
+.header-content{
+    
+    margin: 0 auto;
+  
+ 
+    h1{
+        grid-row: 1;
+        grid-column: 1/2;
+        align-self: end;
+        height: min-content;
+
+    }
+    p{
+        grid-row:2;
+        
+    }
+    img{
+        grid-column: 2;
+        grid-row: 1/3;
+        justify-self: start;
+    }
+   
+}
+
+
+@media(min-width:600px){
+    img{
+     
+        width:80%;
+     
+    }
+    h1{
+        font-size:calc(1.5rem + 4.8vmax);
+        font-weight: 700;
+        color: #4b48a6;
+        line-height: calc(1rem + 1vmax);
+        
+     
+    }
+    p{
+        font-size:calc(1rem + 2.5vmax);
+        color: #a8a5ef;
+    }
+}

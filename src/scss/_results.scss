@@ -1,0 +1,40 @@
+.person {
+  width: 400px;
+  margin: 0.75rem auto;
+  box-shadow: 0 0 2px 0  #6a79869b;
+  padding: 1rem;
+  color:#6a7986;
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+ ul{
+     display:flex;
+     font-size:13px;
+     justify-content: space-between;
+     
+ }
+ span{
+     font-weight: 500;
+     color:#6a7986;
+ }
+  li {
+    font-weight: 200;
+    margin-right:0.5rem;
+
+  
+  }
+}
+
+.error{
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 0 2px 0  #6a79869b;
+  padding: 2rem;
+  text-align: center;
+  color:#6a7986;
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}

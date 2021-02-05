@@ -1,0 +1,24 @@
+{
+  "name": "api-search",
+  "version": "1.0.0",
+  "description": "Setting up client side query params and fetching hacker news articles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "concurrently \"mkdir -p src src/js src/css src/scss src/assets\" \"touch src/index.html src/js/index.js src/scss/styles.scss\"",
+    "dev": "parcel src/index.html  ",
+    "build": "parcel build src/index.html "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "http-server": "^0.12.3",
+    "parcel": "^1.12.4"
+  }
+}

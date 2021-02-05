@@ -1,0 +1,112 @@
+.search-api{
+    margin: 2rem 0 1.5rem;
+}
+.categories{
+    font-size: 14px;
+    display:grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-column-gap:1.75rem;
+    
+ 
+   label{
+    color:rgb(99, 99, 113); 
+    width:6rem;
+    text-align: center;
+   }
+   input{
+    outline-color: #0575ff;
+   }
+
+    li{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+}
+ 
+
+.category.subheading{
+    grid-column: 1/-1;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+ .category.search-term{
+     margin-top:1rem;
+     grid-gap:0.5rem;
+    grid-column: 1/ -1;
+ 
+    justify-content: flex-start;
+    align-items: stretch;
+    div{
+     display:flex;
+     justify-content: flex-start;
+     border-radius: 3px;
+     box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.552);
+     width:100%;
+    }
+  
+    label{
+        background:rgba(128, 128, 128, 0.224);
+        padding: 0.25rem 0.5rem;
+    }
+    input, button{
+        border:none;
+        background-color: transparent;
+      
+    }
+    input[type=text]{
+        width:100%;
+        padding-left:0.5rem;
+    }
+    button{
+        
+        border-radius: 3px;
+        background-color:#6a7a86;
+
+        color:white;
+        font-size:1rem;
+        font-weight: 600;
+    }
+}
+ 
+
+
+ 
+
+// .search{
+//     width:70%;
+//     max-width: 300px;
+//     margin: 0 auto;
+//     text-align: left;
+//     label{
+//         display: block;
+//         font-size:1rem;
+//     }
+//     input, button{
+//         width: 100%;
+//         border:none;
+//         border-radius: 3px;
+//         padding: 0.25rem 0.5rem;
+//         font-size:1rem;
+//     }
+//     input{
+//         box-shadow: 0 0 3px 0 rgb(42, 40, 62);
+//     }
+//     button{
+//         width:28%;
+//         box-shadow: 0 0 3px 0 #6763cd;
+//         background-color: #6763cd;
+//         color:#ffffff;
+//     }
+// }
+
+// .search-breeds{
+//     display:flex;
+//     gap:0.5rem;
+// }
+ 
