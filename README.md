@@ -22,6 +22,12 @@ https://assignment1dmit2008zahid.netlify.app/
 
 Once you enter the webpage, you can type the name of the stock symbol into our search bar and click the button 'Search'. The results of the search will be displayed right below in a block. You can do multiple searches one after another in my app. 
 
+## Live Demo of my App
+
+Please visit the following URL to watch a live demo of my app:
+
+https://drive.google.com/file/d/1tVho3sNIbCqKjJt2wKSfEXeXRHeJHdY6/view?usp=sharing
+
 ## Tools used in our app
 
 ### Alpha Advantage API
