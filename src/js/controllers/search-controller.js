@@ -10,11 +10,9 @@ function SearchController(model, searchView, resultsView) {
 
     }
 
-
-
     // form submit button handler
     this.onHandleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // preventing default form submission behaviour
 
         if (e.currentTarget.searchTerm.value == "") {  // input validation
             alert("The input text field can not be blank.")
@@ -39,4 +37,4 @@ function SearchController(model, searchView, resultsView) {
     return this;
 }
 
-export default SearchController
+export default SearchController // exporting the class

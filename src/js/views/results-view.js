@@ -4,7 +4,8 @@ function isEmpty(obj) { // function to check for empty json object
   return Object.keys(obj).length === 0;
 }
 
-const stockView = `
+// template literal for a resultant stock object
+const stockView = ` 
 <aside class="stockdiv">
   <ul class="details" >
     <li><b> Stock Symbol: <span><%= a["01. symbol"] %></span><b></li>
@@ -21,6 +22,7 @@ const stockView = `
 </aside>
 `;
 
+// template literal for displaying search error message
 const noResultsView = `
 <aside class="error">
   <header>
@@ -29,27 +31,27 @@ const noResultsView = `
 </aside>
 `;
 
-function ResultsView(viewId) {    
+function ResultsView(viewId) {
   this.container = document.querySelector(viewId);
+
   this.renderStock = function (stockinfo) {
-    // if there are no people in the results
+    
     this.removeChildElements();
-    if (isEmpty(stockinfo["Global Quote"])) {
-      const elem = ejs.render(noResultsView);  // it renders in case if response object is empty
-      this.container.insertAdjacentHTML("afterbegin", elem);
+    if (isEmpty(stockinfo["Global Quote"])) { // if no stock object is found
+      const elem = ejs.render(noResultsView);  // it renders into DOM in case if response object is empty
+      this.container.insertAdjacentHTML("afterbegin", elem); // markup added here
     }
-    else
-    {
-      let a = stockinfo["Global Quote"];  // it renders in case if response object is not empty
+    else { // if stock object is found
+      let a = stockinfo["Global Quote"];  // it renders into DOM in case if response object is not empty
       const elem = ejs.render(stockView, { a });
-      this.container.insertAdjacentHTML("afterbegin", elem);
+      this.container.insertAdjacentHTML("afterbegin", elem); // markup added here
     }
-    
-    
+
+
 
   };
 
-  this.removeChildElements = function () {  // removes previously generated HTML elements in the results container
+  this.removeChildElements = function () {  // removes previously generated aside elements in the results container
     this.container.querySelectorAll("aside").forEach((stockdiv) => {
       console.log("remove")
       console.log(stockdiv)
@@ -59,4 +61,4 @@ function ResultsView(viewId) {
   return this;
 }
 
-export default ResultsView;
+export default ResultsView; // exporting the class
